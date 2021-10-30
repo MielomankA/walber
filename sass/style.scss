@@ -147,6 +147,7 @@ summary {
 @import './about';
 @import './games';
 @import './programms';
+@import './working';
 
 html {
   box-sizing: border-box;
@@ -195,3 +196,15 @@ a {
   // align-items: center;
   text-align: center;
 }
+
+/* @media (max-width: 1024px) {
+} */
+
+@media (max-width: 796px) {
+  .section-title {
+    font-size: 32px;
+  }
+}
+
+/* @media (max-width: 450px) {
+} */
