@@ -278,6 +278,12 @@ summary {
   }
 }
 /* TODO: linear gradient */
+.about {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(41, 41, 41, 0.9)), to(rgba(15, 15, 15, 0.9)));
+  background-image: -webkit-linear-gradient(top, rgba(41, 41, 41, 0.9), rgba(15, 15, 15, 0.9));
+  background-image: linear-gradient(to bottom, rgba(41, 41, 41, 0.9), rgba(15, 15, 15, 0.9));
+}
+
 .about-logo {
   display: block;
   display: flex;
@@ -409,6 +415,12 @@ summary {
   .card__img {
     width: 100px;
     height: 100px;
+  }
+}
+@media (max-width: 425px) {
+  .card__img {
+    width: 70px;
+    height: 70px;
   }
 }
 .work {
@@ -748,7 +760,7 @@ summary {
 } */
 @media (max-width: 796px) {
   .download {
-    padding-top: 60px;
+    padding: 60px 0;
   }
 
   .download-main {
@@ -761,7 +773,7 @@ summary {
 }
 @media (max-width: 425px) {
   .download {
-    padding-top: 30px;
+    padding: 30px 0;
   }
 
   .error-title {
@@ -770,6 +782,44 @@ summary {
 
   .error-desc {
     font-size: 14px;
+  }
+}
+.footer {
+  background-color: #141414;
+}
+
+.footer-content {
+  padding: 60px 0;
+}
+
+.footer-mail {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-mail a {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.footer-mail a:hover {
+  color: #66ff00;
+}
+
+.hashapp,
+.location {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.location {
+  padding-top: 15px;
+}
+
+@media (max-width: 425px) {
+  .footer-content {
+    padding: 30px 0;
   }
 }
 html {
