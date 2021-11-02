@@ -159,15 +159,22 @@ summary {
   display: flex;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px;
-  visibility: hidden;
   top: 0px;
   opacity: 1;
   background-color: #0f0f0f;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  transform: translateY(0);
+}
+
+.visible {
+  visibility: visible;
+  transform: translateY(90px);
 }
 
 .header__fixed {
   position: fixed;
-  top: 0;
+  top: -90px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -276,6 +283,61 @@ summary {
   .menu__burger {
     display: block;
   }
+
+  .menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 75px;
+    transform: translateX(100%);
+    transition: 0.2s all linear;
+  }
+
+  .navigation_active {
+    transform: translateX(0);
+    background-color: rgba(0, 0, 0, 0.9);
+    display: block;
+    height: 100vh;
+  }
+
+  .menu__nav-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 11;
+  }
+
+  .menu__nav-close-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    top: 50%;
+  }
+
+  .menu__nav-close-line:first-child {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .menu__nav-close-line:last-child {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+@media (max-width: 425px) {
+  .menu__list {
+    display: block;
+    padding-top: 60px;
+  }
+
+  .menu__item {
+    padding-top: 30px;
+  }
 }
 /* TODO: linear gradient */
 .about {
@@ -341,7 +403,7 @@ summary {
   }
 }
 .games {
-  padding: 120px 0;
+  padding: 120px 0 0;
 }
 
 .cards-field {
@@ -423,6 +485,10 @@ summary {
     height: 70px;
   }
 }
+.programms {
+  padding-top: 120px;
+}
+
 .work {
   margin-top: 100px;
 }
@@ -687,7 +753,7 @@ summary {
   font-weight: 400;
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 60px;
 }
 
 .download-buttons {
