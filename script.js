@@ -62,3 +62,21 @@ document.addEventListener('scroll', function () {
     });
   }
 })();
+
+(function getOS() {
+  let platform = window.navigator.platform,
+    macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+    windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
+
+  console.log(platform);
+  if (windowsPlatforms.indexOf(platform) !== -1) {
+    windowsBtn.classList.remove('none');
+    macosBtn.classList.add('none');
+  } else if (macosPlatforms.indexOf(platform) !== -1) {
+    macosBtn.classList.remove('none');
+    windowsBtn.classList.add('none');
+  } else if (!windowsPlatforms && !macosPlatforms) {
+    return 'No download available for your OS';
+  }
+  return;
+})();
