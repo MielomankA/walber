@@ -6,10 +6,12 @@ const linkGames = document.querySelector('.link-games');
 const linkProgramms = document.querySelector('.link-programms');
 const linkDownload = document.querySelector('.link-download');
 const links = document.querySelectorAll('.menu__link');
-console.log(linkGames);
+const windowsBtn = document.querySelector('.windows');
+const macosBtn = document.querySelector('.macos');
+// console.log(linkGames);
 
 document.addEventListener('scroll', function () {
-  console.log(window.pageYOffset);
+  // console.log(window.pageYOffset);
   if (window.pageYOffset >= 769) {
     header.classList.add('visible');
   } else {

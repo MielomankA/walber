@@ -489,6 +489,16 @@ summary {
   padding-top: 120px;
 }
 
+@media (max-width: 796px) {
+  .programms {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 425px) {
+  .programms {
+    padding-top: 10px;
+  }
+}
 .work {
   margin-top: 100px;
 }
@@ -820,6 +830,10 @@ summary {
   font-size: 16px;
   line-height: 1.45;
   text-align: center;
+}
+
+.none {
+  display: none;
 }
 
 /* @media (max-width: 1024px) {
