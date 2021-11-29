@@ -40,21 +40,22 @@
 
 .download-buttons a {
   display: block;
-  width: 250px;
+  width: 200px;
   padding: 1em 0;
   color: #66ff00;
   text-align: center;
   text-decoration: none;
   border: 2px solid #66ff00;
-  border-radius: 3px;
+  /*  border-radius: 3px; */
 }
 
 .download-buttons a:hover {
   color: $white;
-  background-color: #66ff00;
+  border: 2px solid $white;
+  /* background-color: #66ff00; */
 }
 
-.download-buttons .download-logo {
+/* .download-buttons .download-logo {
   display: block;
   width: 100%;
   margin: 0 auto;
@@ -64,7 +65,7 @@
 .download-buttons .download-logo:hover {
   width: 100%;
   fill: $white;
-}
+} */
 
 .download-error {
   display: none;
